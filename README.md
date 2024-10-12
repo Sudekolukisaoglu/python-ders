@@ -1,2 +1,0 @@
-# sude
-pyhton1
