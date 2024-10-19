@@ -7,3 +7,4 @@ for aa in range(20):
     turtle.forward(50)
     turtle.left(90)
 ınput()
+
