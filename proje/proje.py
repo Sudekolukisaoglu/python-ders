@@ -10,7 +10,7 @@ print("║                     ║")
 print("║  1-hesap makinesi   ║")
 print("║  2-oyunlar          ║")
 print("║  3-çizimler         ║")
-print("║  4-çarpım tablosu   ║")
+print("║  4-ritmik sayma     ║")
 print("║                     ║")
 print("║    Seçimiz nedir?   ║")
 print("╚═════════════════════╝")
@@ -24,4 +24,6 @@ elif secim == '2':
 elif secim == '3':
     çizimler.çiz() 
 elif secim =='4':
-    çarpımtablosu.çarp()
+     ritmiksayma = []  
+
+
