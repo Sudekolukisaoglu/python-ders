@@ -1,10 +1,39 @@
+import random
+
 def oyun_oyna():
-    print("tahmin oyunu")
+    kelimeler = ["zürafa", "radyo", "çiçek", "kurabiye", "ambulans","tren","sincap"]
+    kelime = random.choice(kelimeler)
+    tahminler = []
+    deneme_hakki = 10
+    kelime_tahmin = ["_" for _ in kelime]
 
-    tahmin = input("Bir sayı tahmin edin (1-10): ")
-    if tahmin.isdigit() and 1 <= int(tahmin) <= 10:
-        print(f"Tahmininiz: {tahmin}. Oyun başladı!")
+    print("Adam Asmaca Oyununa Hoşgeldiniz!")
+
+    while deneme_hakki > 0 and "_" in kelime_tahmin:
+        print("\nKalan deneme hakkı:", deneme_hakki)
+        print("Tahmin ettiğiniz kelime:", " ".join(kelime_tahmin))
+        tahmin = input("Bir harf tahmin edin: ").lower()
+
+        if len(tahmin) != 1 or not tahmin.isalpha():
+            print("Lütfen sadece bir harf girin.")
+            continue
+
+        if tahmin in tahminler:
+            print("Bu harfi zaten tahmin ettiniz.")
+            continue
+
+        tahminler.append(tahmin)
+
+        if tahmin in kelime:
+            for index, harf in enumerate(kelime):
+                if harf == tahmin:
+                    kelime_tahmin[index] = tahmin
+            print("Tebrikler! Doğru tahmin.")
+        else:
+            deneme_hakki -= 1
+            print("Üzgünüm, bu harf kelimede yok.")
+
+    if "_" not in kelime_tahmin:
+        print("Tebrikler! Kelimeyi buldunuz:", kelime)
     else:
-        print("Lütfen 1 ile 10 arasında bir sayı girin.")
-
-
+        print("Kaybettiniz! Kelime:", kelime)

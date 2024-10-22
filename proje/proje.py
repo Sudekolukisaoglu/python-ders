@@ -23,5 +23,3 @@ elif secim == '2':
     oyunlar.oyun_oyna()  
 elif secim == '3':
     çizimler.çiz() 
-else:
-    print("Geçersiz seçim!")  
