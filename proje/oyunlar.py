@@ -1,11 +1,10 @@
 import random
-import os
 
 def oyun_oyna():
     kelimeler = ["zürafa", "radyo", "çiçek", "kurabiye", "ambulans", "tren", "sincap"]
     kelime = random.choice(kelimeler)
     tahminler = []
-    deneme_hakki = 10
+    deneme_hakki = 5
     kelime_tahmin = ["_" for _ in kelime]
 
     print("Adam Asmaca Oyununa Hoşgeldiniz!")
@@ -39,62 +38,40 @@ def oyun_oyna():
     else:
         print("Kaybettiniz! Kelime:", kelime)
 
-def print_board(yilan, yem, boyut=10):
-    os.system('cls' if os.name == 'nt' else 'clear')
-    board = [['.' for _ in range(boyut)] for _ in range(boyut)]
-    
-    for (x, y) in yilan:
-        board[y][x] = 'Y'  # Yılan
-    board[yem[1]][yem[0]] = 'E'  # Yem
+def matematik_oyunu():
+    print("Matematik Oyununa Hoşgeldiniz!")
+    puan = 0
+    soru_sayisi = 5
 
-    for row in board:
-        print(' '.join(row))
-    print()
+    for _ in range(soru_sayisi):
+        sayi1 = random.randint(1, 10)
+        sayi2 = random.randint(1, 10)
+        cevap = sayi1 + sayi2
 
-def yilan_oyunu():
-    boyut = 10
-    yilan = [(0, 0)]
-    yem = (random.randint(0, boyut-1), random.randint(0, boyut-1))
-    yön = (0, 1)  # Başlangıçta sağa hareket
+        tahmin = int(input(f"{sayi1} + {sayi2} = ? "))
 
-    while True:
-        print_board(yilan, yem, boyut)
-        
-        girdi = input("Yön (W/A/S/D): ").lower()
-        if girdi == 'w':
-            yön = (0, -1)
-        elif girdi == 's':
-            yön = (0, 1)
-        elif girdi == 'a':
-            yön = (-1, 0)
-        elif girdi == 'd':
-            yön = (1, 0)
-
-        yeni_baş = (yilan[0][0] + yön[0], yilan[0][1] + yön[1])
-
-        # Sınır kontrolü
-        if (0 <= yeni_baş[0] < boyut and 0 <= yeni_baş[1] < boyut and yeni_baş not in yilan):
-            yilan.insert(0, yeni_baş)  # Yılanı güncelle
-            if yeni_baş == yem:
-                yem = (random.randint(0, boyut-1), random.randint(0, boyut-1))  # Yeni yem
-            else:
-                yilan.pop()  # Yılanın sonunu çıkar
+        if tahmin == cevap:
+            print("Doğru cevap!")
+            puan += 1
         else:
-            print("Oyun Bitti!")
-            break
+            print(f"Yanlış cevap! Doğru cevap: {cevap}")
+
+    print(f"Oyun bitti! Toplam puanınız: {puan}/{soru_sayisi}")
 
 def main():
     print("Oyun Seçenekleri:")
     print("1. Adam Asmaca")
-    print("2. Yılan Oyunu")
+    print("2. Matematik Oyunu")
 
     secim = input("Bir oyun seçin (1 veya 2): ")
 
     if secim == '1':
         oyun_oyna()
     elif secim == '2':
-        yilan_oyunu()
+        matematik_oyunu()
     else:
         print("Geçersiz seçim!")
 
-
+# Ana fonksiyonu çalıştır
+if __name__ == "__main__":
+    main()
