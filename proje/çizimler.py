@@ -1,25 +1,25 @@
 import turtle
 
-def kare_ciz():
+def kare_çiz():
     kalem = turtle.Turtle()
     for _ in range(4):
         kalem.forward(100)
         kalem.right(90)
     turtle.done()
 
-def ucgen_ciz():
+def ucgen_çiz():
     kalem = turtle.Turtle()
     for _ in range(3):
         kalem.forward(100)
         kalem.right(120)
     turtle.done()
 
-def daire_ciz():
+def daire_çiz():
     kalem = turtle.Turtle()
     kalem.circle(100)
     turtle.done()
 
-def ciz():
+def çiz():
     print("Çizimler: ")
     print("1. Kare çiz")
     print("2. Üçgen çiz")
@@ -28,10 +28,10 @@ def ciz():
     secim = input("Bir şekil seçin (1/2/3): ")
 
     if secim == '1':
-        kare_ciz()
+        kare_çiz()
     elif secim == '2':
-        ucgen_ciz()
+        ucgen_çiz()
     elif secim == '3':
-        daire_ciz()
+        daire_çiz()
     else:
         print("Geçersiz bir seçim yaptınız.")
