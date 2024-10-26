@@ -2,6 +2,7 @@ import hesapmakinesi
 import oyunlar
 import çizimler
 import ritmiksayma
+import çarpımtablosu
 
 print("\033[1;32;40m")
 #print("╔"+"═"*20+"╗")
@@ -12,7 +13,7 @@ print("║  1-hesap makinesi   ║")
 print("║  2-oyunlar          ║")
 print("║  3-çizimler         ║")
 print("║  4-ritmik sayma     ║")
-print("║  5-                 ║")
+print("║  5-çarpım tablosu   ║")
 print("║                     ║")
 print("║    Seçimiz nedir?   ║")
 print("╚═════════════════════╝")
@@ -27,6 +28,8 @@ elif secim == '3':
     çizimler.çiz() 
 elif secim =='4':
     ritmiksayma.ritmik_sayma()
+elif secim =='5':
+    çarpımtablosu.çarpım_tablosu()
 
 
 
