@@ -12,7 +12,7 @@ print("║  1-hesap makinesi   ║")
 print("║  2-oyunlar          ║")
 print("║  3-çizimler         ║")
 print("║  4-ritmik sayma     ║")
-print("║  5-çıkış            ║")
+print("║  5-                 ║")
 print("║                     ║")
 print("║    Seçimiz nedir?   ║")
 print("╚═════════════════════╝")
@@ -27,10 +27,7 @@ elif secim == '3':
     çizimler.çiz() 
 elif secim =='4':
     ritmiksayma.ritmik_sayma()
-elif secim == '5':
-    print("Çıkılıyor...")
-else:
-    print("Geçersiz seçim! Lütfen 1, 2, 3, 4 veya 5'i girin.")
+
 
 
 
