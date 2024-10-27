@@ -16,3 +16,5 @@ Bu proje....
 
     -liste1
     -liste2
+    ..
+    
