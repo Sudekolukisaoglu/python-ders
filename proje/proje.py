@@ -3,6 +3,7 @@ import oyunlar
 import çizimler
 import ritmiksayma
 import çarpımtablosu
+import nothesaplama
 
 print("\033[1;32;40m")
 #print("╔"+"═"*20+"╗")
@@ -14,6 +15,7 @@ print("║  2-oyunlar          ║")
 print("║  3-çizimler         ║")
 print("║  4-ritmik sayma     ║")
 print("║  5-çarpım tablosu   ║")
+print("║  6-not hesaplama    ║")
 print("║                     ║")
 print("║    Seçimiz nedir?   ║")
 print("╚═════════════════════╝")
@@ -30,6 +32,8 @@ elif secim =='4':
     ritmiksayma.ritmik_sayma()
 elif secim =='5':
     çarpımtablosu.çarpım_tablosu()
+elif secim =='6':
+    nothesaplama.not_hesapla()
 
 
 
