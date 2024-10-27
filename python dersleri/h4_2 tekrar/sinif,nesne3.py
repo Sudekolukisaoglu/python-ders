@@ -20,11 +20,9 @@ ogrenci2 = Ogrenci("Ebru GÜNDEŞŞ",91)
 print(ogrenci2)
 print(ogrenci2.adi)
 # print(ogrenci2.soyadı)
-print(Ogrenci.adi)                   
+print(Ogrenci.adi)    
 
 
 
-
-  
 
 
