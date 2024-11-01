@@ -4,9 +4,9 @@ import çizimler
 import ritmiksayma
 import çarpımtablosu
 import nothesaplama
+import yashesabi
 
 print("\033[1;32;40m")
-#print("╔"+"═"*20+"╗")
 print("╔═════════════════════╗")
 print("║\033[1;31;40m   öncüller app  \033[1;32;40m  ║")
 print("║                     ║")
@@ -16,6 +16,7 @@ print("║  3-çizimler         ║")
 print("║  4-ritmik sayma     ║")
 print("║  5-çarpım tablosu   ║")
 print("║  6-not hesaplama    ║")
+print("║  7-yas hesabi       ║")
 print("║                     ║")
 print("║    Seçimiz nedir?   ║")
 print("╚═════════════════════╝")
@@ -28,13 +29,11 @@ elif secim == '2':
     oyunlar.oyun_oyna()  
 elif secim == '3':
     çizimler.çiz() 
-elif secim =='4':
+elif secim == '4':
     ritmiksayma.ritmik_sayma()
-elif secim =='5':
+elif secim == '5':
     çarpımtablosu.çarpım_tablosu()
-elif secim =='6':
+elif secim == '6':
     nothesaplama.not_hesapla()
-
-
-
-
+elif secim == '7':
+    yashesabi.yas_hesabi()
