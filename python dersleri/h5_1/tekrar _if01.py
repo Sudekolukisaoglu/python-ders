@@ -1,11 +1,12 @@
-a = 33
-b =200
-gün = "Pazar"
-# if b > a : print("true sonucu geldi.)
-# print (a < b)
-# if True : print ("deneme")
-# if a < b :
-#   print ("deneme")
+b = range(5,10,2)
+for a in b :
+    print(a)
 
-#  if gün == "Cuma" or gün == "Cumartesi":print("Yarın tatil")
-if True or False
+print(b)
+
+c = [2,4,1,7]
+for a in c :
+    print(a)
+
+for a in "vektorel":
+    print(a)
