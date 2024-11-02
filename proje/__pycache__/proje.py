@@ -5,7 +5,7 @@ import ritmiksayma
 import çarpımtablosu
 import nothesaplama
 import yashesabi
-import tetris
+
 
 
 
@@ -20,7 +20,7 @@ print("║  4-ritmik sayma     ║")
 print("║  5-çarpım tablosu   ║")
 print("║  6-not hesaplama    ║")
 print("║  7-yas hesabi       ║")
-print("║  8-tetris           ║")
+print("║  8-                 ║")
 print("║                     ║")
 print("║    Seçimiz nedir?   ║")
 print("╚═════════════════════╝")
@@ -41,7 +41,6 @@ elif secim == '6':
     nothesaplama.not_hesapla()
 elif secim == '7':
     yashesabi.yas_hesabi()
-elif secim =='8':
-    tetris.tetris()
+
     
 
