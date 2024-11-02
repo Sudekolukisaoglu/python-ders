@@ -41,7 +41,7 @@ elif secim == '6':
     nothesaplama.not_hesapla()
 elif secim == '7':
     yashesabi.yas_hesabi()
-elif  =='8':
+elif secim =='8':
     tetris.tetris()
     
 
