@@ -20,18 +20,7 @@ def rehber_listele():
         print(f"{sira+1} - {b[0]},\t Telefonu: {b[1]}")
 
 def rehber_sil():
-    print("Mevcut kayıtlar")
-    rehber_listele()
-    silinecek = input ("Hangi kayıt silinecek(numarasını girin)"):
-    dosya = open("rehber.txt","w")
-    okunan = dosya.readlines
-    dosya.close()
-    dosya = open("rehber.txt","w")
-
-    for sira,a in enumerate(okunan):
-        if sira != silinecek: dosya.write(a)
-
-
+    pass
 
 def rehber_duzelt():
     pass        
