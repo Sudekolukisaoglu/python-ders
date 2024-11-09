@@ -20,11 +20,42 @@ def rehber_listele():
         print(f"{sira+1} - {b[0]},\t Telefonu: {b[1]}")
 
 def rehber_sil():
-    pass
+    print("Mevcut kayıtlar")
+    # rehber_listele()
+    silinecek =int(input ("Hangi kayıt silinecek(numarasını girin):"))
+    dosya = open("rehber.txt","+r")
+    okunan = dosya.readlines()
+    print("Silinecek kayıt : ",okunan[silinecek-1])
+    silinecekKayit = okunan[silinecek-1]
+    dosya.close
+
+    dosya = open("rehber.txt","w")
+    for a in okunan :
+        if a != silinecekKayit: dosya.write(a)
+    dosya.close()    
 
 def rehber_duzelt():
-    pass        
+    print("Mevcut kayıtlar")
+    rehber_listele()
+    duzeltilecek = int(input ("Hangi kayıt düzeltilecek"))
+    dosya = open("rehber.txt","r+")
+    okunan = dosya.readlines()
+    duzeltilecekKayit = okunan[duzeltilecek-1]
+    print("Düzeltilecek kayıt : ",duzeltilecekKayit)
+    dosya.close
 
+    dosya = open("rehber.txt","w")
+    for a in okunan:
+        if a == duzeltilecekKayit:
+            print("\n\n Yeni bilgileri giriniz:")
+            ad = input("Ad  : ")
+            tel = input("Tel  : ")
+            dosya.write(f"{ad}#{tel}\n")
+        else: dosya.write(a)
+
+    dosya.close()
+    
+            
 def anamenu():
     print("╔═════════════════════╗")
     print("║ REHBER UYGULAMASI   ║")
