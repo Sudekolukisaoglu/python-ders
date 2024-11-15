@@ -4,6 +4,7 @@ import çizimler
 import ritmiksayma
 import çarpımtablosu
 import nothesaplama
+import pusula
 
 print("\033[1;32;40m")
 #print("╔"+"═"*20+"╗")
@@ -16,6 +17,7 @@ print("║  3-çizimler         ║")
 print("║  4-ritmik sayma     ║")
 print("║  5-çarpım tablosu   ║")
 print("║  6-not hesaplama    ║")
+print("║  7-pusula           ║")
 print("║                     ║")
 print("║    Seçimiz nedir?   ║")
 print("╚═════════════════════╝")
@@ -34,6 +36,8 @@ elif secim =='5':
     çarpımtablosu.çarpım_tablosu()
 elif secim =='6':
     nothesaplama.not_hesapla()
+elif secim == '7':
+    pusula.pusula() 
 
 
 
