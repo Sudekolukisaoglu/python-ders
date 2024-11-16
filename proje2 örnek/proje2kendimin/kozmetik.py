@@ -1,8 +1,3 @@
-import os
-if not os.path.exists("kozmetik_urunler.txt"):
-    with open("kozmetik_urunler.txt", "w") as dosya:
-        pass
-
 def urun_ekle():
     with open("kozmetik_urunler.txt", "a") as dosya:
         print("\n\nKozmetik ürüne ait bilgileri giriniz")
