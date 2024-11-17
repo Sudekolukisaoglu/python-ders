@@ -1,0 +1,11 @@
+Ruj #249,90
+Far paleti#400
+Maskara#490.90
+Aydýnlatýcý#199,90
+Eyeliner#159,00
+Ruj#249,90
+Ruj#249,90
+###
+Ruj#249,90#Yüzünüzü aydýnlatmak için ruj sürmek gibisi yok, ama bu kadar renk seçeneði varken, nereden baþlayacaðýnýz bilmek zor olabilir.#
+Ruj#249,90#dudaða renk vermesi için kullanýlan ve içinde pigmentler, yaðlar, balmumu ve yumuþatýcý maddeler içeren bir kozmetik ürünüdür#& C:/Users/sudek/AppData/Local/Programs/Python/Python313/python.exe "c:/Users/sudek/Documents/python-ders/proje2 örnek/proje2kendimin/kozmetik.py"
+Maskara#490,90#& C:/Users/sudek/AppData/Local/Programs/Python/Python313/python.exe "c:/Users/sudek/Documents/python-ders/proje2 örnek/proje2kendimin/kozmetik.py"

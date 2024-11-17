@@ -1,0 +1,60 @@
+class Ilan():
+    fiyat = "tanimsiz" #propty = özellik
+    ilanNo = "yok"
+    adres = "---"
+    ilanTarihi = "tanımlanmamış"
+    def __init__(ilan,fiyati=fiyat,no=ilanNo,adresi=adres,tarih=ilanTarihi):
+        ilan.fiyat = fiyati
+        ilan.ilanNo = no 
+        ilan.adres = adresi
+        ilan.ilanTarihi =tarih
+
+ilan1 = Ilan("Ücretsiz Sahiplendirme","452","Çankaya/Ankara","2024-11-10")
+
+print(ilan1)
+print(f"Fiyat\t: \t{ilan1.fiyat}\nAdres\t: \t{ilan1.adres}\n\   İlan no\t: \t{ilan1.ilanNo}\nİlan Tarihi: \t{ilan1.ilanTarihi}")  
+
+class HayvanAlemi(Ilan): #(Ilan) Ilan sınıfından miras alma oluyor.
+
+    Türü = ""
+    Irkı = ""
+    Yaşı = ""
+    Cinsiyeti = ""
+
+    def __init__(xx,fiyati="Ücretsiz Sahiplendirme",no="0",adresi="",tarih="",tur="",irk="",yas=0,cins="Tanımsiz"): #ilan = self
+        super().__init__(fiyati,no,adresi,tarih)  #Sınıf yanındaki () ifadesi init fonksiyonunu çağırıyor
+        xx.Türü = tur
+        xx.Irkı = irk
+        xx.Yaşı = yas
+        xx.Cinsiyeti = cins
+
+hayvan1 = HayvanAlemi("Sahiplendirme","8887","Merkez/Konya","2024-11-11","Siyam","Karma","2","Erkek") 
+print("hayvan1.İlanNo:",hayvan1.ilanNo)
+print("hayvan1.Yaşı: ",hayvan1.Yaşı)
+
+Hayvan2 = HayvanAlemi()
+
+
+
+class Emlak(Ilan):
+    def __init__(self,fiyat="Ücretsiz Sahiplendirme",no="0",adres="--",tarih="--",tip="--",kredi="olur"):
+        super().__init__(fiyat,no,adres,tarih)
+        self.EmlakTipi = tip
+        self.kimdenDurumu = kimden
+
+emlak1 = Emlak("2500000","8875","Çan/Denizli","2024-11-15","Ev","Uygun")
+print("/n/n/nemlak1.EmlakTipi: ",emlak1.EmlakTipi)
+
+class KiralikEv(Emlak):
+    def __init__(self,fiyat="---",no="0",adres="--",tarih="",tip="-",kimden="emlakcıdan",depozito="0"):
+        super().__init__(fiyat,no,adres,tarih,tip,kimden)
+        self.Depozitos = depozito
+
+class SatilikEv(Emlak):
+    def __init__(self,fiyat="---",no="0",adres="--",tarih="",tip="-",kimden="emlakcıdan",tapu="Sorunsuz"):
+         super().__init__(fiyat,no,adres,tarih,tip,kimden)
+         self.tapuDurumu = tapu
+
+
+class Tasıt(Ilan):
+    pass
