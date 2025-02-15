@@ -1,6 +1,6 @@
 import sys
 from PyQt6.QtWidgets import *
-import ticari
+import proje3.ticari as ticari
 
 class LoginWindow(QMainWindow):
     def __init__(self):
