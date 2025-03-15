@@ -4,7 +4,7 @@ from sklearn.svm import SVC  # Basit bir SVM modeli
 from sklearn.preprocessing import StandardScaler
 
 # 1. OpenCV ile Kamerayı Aç
-cap = cv2.VideoCapture(1)  # 0, varsayılan kamerayı kullanır
+cap = cv2.VideoCapture(0)  # 0, varsayılan kamerayı kullanır
 face_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + "haarcascade_frontalface_default.xml")
 
 # 2. Örnek eğitim verisi (Gerçek modelde buraya eğitim süreci eklenebilir)
